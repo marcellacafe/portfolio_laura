@@ -1,0 +1,71 @@
+baseURL: https://eternity.bora.sh # todo: change site url.
+title: Portfolio # todo: change site name.
+defaultContentLanguage: 'en'
+theme: eternity
+googleAnalytics: '' # todo: set your analytics id.
+
+params:
+  image: /images/banner.png
+  logo: logo.png # todo: add your custom logo to static/
+  subtitle: Eternity is a minimalist Hugo theme designed for portfolio sites with a fresh feel. # todo: change default subtitle for your website.
+  copyright: All rights reserved. # todo: set your copyright type.
+  author: Marcella Café # todo: set your full name.
+  dontShowSource: false # please, do not do this :)
+  portfolio:
+    columns:
+      desktop:
+        nature: 4
+        archive: 6
+        people: 2
+        default: 3
+      mobile:
+        default: 2
+        archive: 3
+        people: 1
+  socials:
+    # todo: change these links.
+    - icon: 'far fa-envelope fa-lg'
+      url: 'mailto:marialauracafe@outlook.com'
+      landing: true
+    - icon: 'fab fa-linkedin-in fa-lg'
+      url: 'https://www.linkedin.com/in/maria-laura-caf%C3%A9/'
+  homepage: "/work" # homepage link, mostly same with menu.main[0]
+  specialPages:
+    - work
+    - archive
+  bypassWelcomePage: true # redirects "/" to "homepage" when it's true.
+  disableWelcomePageBackground: false # disables the background image on the homepage
+  plausible: '' # todo: set your plausible id.
+  disableRadius: false
+  moveIt: false  # Moves Title and Meta info down, only visible when scroll.
+  disableAlwaysResize: false
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  work: ":filename/"
+
+menu:
+  main:
+    - name: Quem Sou
+      url: /work/
+      weight: 1
+    - name: Casa de Fim de Semana
+      url: /tags/people/
+      weight: 2
+    - name: Banheiro
+      url: /tags/nature/
+      weight: 3
+    # - name: archive
+    #   url: /tags/archive/
+    #   weight: 4
+    # - name: about
+    #   url: /about/
+    #   weight: 5
