@@ -1,4 +1,4 @@
-baseURL: https://marcellacafe.github.io/portfolio_laura/ # todo: change site url.
+baseURL: https://portfoliolauracafe.netlify.app/ # todo: change site url.
 title: Portfolio # todo: change site name.
 defaultContentLanguage: 'en'
 theme: eternity
